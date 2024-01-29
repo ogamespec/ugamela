@@ -1,0 +1,33 @@
+<form name="zegarek">
+od/do daty 2003.06.28 - 12:01:00 zosta³o/up³ynê³o:
+<br><input type="text" name="czas" size="30" />
+</form>
+
+<script language="javascript" type="text/javascript">
+<!--
+function zegar() {
+  teraz = new Date().getTime(); // aktualna data
+    dzien = new Date(2007,4,09,20,25,0).getTime(); // 2003.06.28 - 12:01:00
+    
+      // wyliczanie roznicy
+        sekund = Math.abs((teraz-dzien)/1000);
+	  minut = Math.floor(sekund/60);
+	    godzin = Math.floor(minut/60);
+	      dni = Math.floor(godzin/24);
+	        lat = Math.floor(dni/365);
+		
+		  // wyliczanie calego okresu
+		    sekund = Math.floor(sekund-minut*60);
+		      minut = Math.floor(minut-godzin*60);
+		        godzin = Math.floor(godzin-dni*24);
+			  dni = Math.floor(dni-lat*365);
+			  
+			    var roznica="lat: "+lat+" dni: "+dni+" godzin: "+godzin+
+			      ((minut<10)?":0":":")+minut+
+			        ((sekund<10)?":0":":")+sekund;
+				  document.zegarek.czas.value=roznica;
+				    setTimeout("zegar()",1000);
+				    }
+				    zegar();
+				    // -->
+				    </script>

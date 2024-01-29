@@ -1,0 +1,4 @@
+[02-Jul-2007 14:23:27] PHP Warning:  fopen(../skins/templates/OpenGame/oparator/left_menu.tpl) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/ogametr/public_html/includes/functions.php on line 122
+[02-Jul-2007 14:23:27] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: Stat failed for ../skins/templates/OpenGame/oparator/left_menu.tpl (errno=2 - No such file or directory) in /home/ogametr/public_html/includes/functions.php on line 123
+[02-Jul-2007 14:23:27] PHP Warning:  fread(): supplied argument is not a valid stream resource in /home/ogametr/public_html/includes/functions.php on line 123
+[02-Jul-2007 14:23:27] PHP Warning:  fclose(): supplied argument is not a valid stream resource in /home/ogametr/public_html/includes/functions.php on line 124

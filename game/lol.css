@@ -1,0 +1,26 @@
+/*
+siema
+*/
+
+
+body
+{
+  color                : #E6EBFB;
+  margin-top           : 1px;
+  margin-left          : 1px;
+  background-color     : #040e1e;
+  background-image     : url(../tlocalc.jpg);
+  background-attachment: fixed;
+  background-repeat    : no-repeat;
+  background-position  : top right;
+  scrollbar-arrow-color: #E6EBFB;
+  scrollbar-base-color: #344566;
+  scrollbar-track-color: #344566;
+  scrollbar-face-color: #344566;
+  scrollbar-highlight-color: #344566;
+  scrollbar-3dlight-color: #465673;
+  scrollbar-darkshadow-color: #344566;
+  scrollbar-shadow-color: #465673;
+  font-size            : 11px;
+  font-family          : Tahoma,sans-serif;
+}

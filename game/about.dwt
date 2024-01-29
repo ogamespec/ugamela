@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Untitled Document</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+<!--
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+.oneColFixCtr #container {
+	width: 780px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.oneColFixCtr #mainContent {
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+}
+-->
+</style></head>
+
+<body class="oneColFixCtr">
+<a href="#pustekuchen" style="display:none;">Link Login</a>
+<div id="main">
+<div id="login"> <a name="pustekuchen" id="pustekuchen"></a>
+    <div id="login_text_1">
+      <div style="position:absolute;left:160px;width:110px;">Username</div>
+      <div style="position:absolute;left:275px;width:50px;">Password</div>
+    </div>
+  <div id="login_input">
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr style="vertical-align:top;">
+          <td><td style="padding-right:4px;"></td>
+          <form action="" method="post" name="loginForm" target="_self" id="loginForm" onsubmit="changeAction('login');" >
+            <input type="hidden" name="v" value="2" />
+            <span>
+            <select tabindex="1" name='universe' class="eingabe" style="width:144px;">
+              <option value="">Choose a universe...</option>
+              <option value="uni1.ogame.org" > 1. Universe</option>
+              <option value="uni2.ogame.org" > 2. Universe</option>
+              <option value="uni3.ogame.org" > 3. Universe</option>
+              <option value="uni4.ogame.org" > 4. Universe</option>
+              <option value="uni5.ogame.org" > 5. Universe</option>
+              <option value="uni6.ogame.org" > 6. Universe</option>
+              <option value="uni7.ogame.org" > 7. Universe</option>
+              <option value="uni8.ogame.org" > 8. Universe</option>
+              <option value="uni9.ogame.org" > 9. Universe</option>
+              <option value="uni10.ogame.org" > 10. Universe</option>
+              <option value="uni11.ogame.org" > 11. Universe</option>
+              <option value="uni12.ogame.org" > 12. Universe</option>
+              <option value="uni13.ogame.org" > 13. Universe</option>
+              <option value="uni14.ogame.org" > 14. Universe</option>
+              <option value="uni15.ogame.org" > 15. Universe</option>
+              <option value="uni16.ogame.org" > 16. Universe</option>
+              <option value="uni17.ogame.org" > 17. Universe</option>
+              <option value="uni18.ogame.org" > 18. Universe</option>
+              <option value="uni19.ogame.org" > 19. Universe</option>
+              <option value="uni20.ogame.org" > 20. Universe</option>
+              <option value="uni21.ogame.org" > 21. Universe</option>
+              <option value="uni22.ogame.org" > 22. Universe</option>
+              <option value="uni23.ogame.org" > 23. Universe</option>
+              <option value="uni24.ogame.org" > 24. Universe</option>
+              <option value="uni25.ogame.org" > 25. Universe</option>
+              <option value="uni26.ogame.org" > 26. Universe</option>
+              <option value="uni27.ogame.org" > 27. Universe</option>
+              <option value="uni28.ogame.org" > 28. Universe</option>
+              <option value="uni29.ogame.org" > 29. Universe</option>
+              <option value="uni30.ogame.org" > 30. Universe</option>
+              <option value="uni31.ogame.org" > 31. Universe</option>
+              <option value="uni32.ogame.org" > 32. Universe</option>
+              <option value="uni33.ogame.org" > 33. Universe</option>
+              <option value="uni34.ogame.org" > 34. Universe</option>
+              <option value="uni35.ogame.org" > 35. Universe</option>
+              <option value="uni36.ogame.org" > 36. Universe</option>
+              <option value="uni37.ogame.org" > 37. Universe</option>
+            </select>
+            </span>
+            <td><td style="padding-right:3px;"></td>
+            <span>
+              <input tabindex="2" class="eingabe" maxlength="20" name="login"   alt="Username" style="width:111px;top:0px"/>
+            </span>
+            <td><span>
+              <input tabindex="3" maxlength="20" type="password" class="eingabe" name="pass" style="width:113px;top:0px" alt="Password" />
+            </span> </td>
+            <td style="padding-top:2px;"><!--<span class="link" onclick="submitLogin()" style="padding-left:7px;">LOGIN</span>-->
+                <input type="image" src="img/login_button.jpg" tppabs="http://www.ogame.org/img/login_button.jpg" alt="Login" class="loginButton" name="button" id="button" onmouseover="document.getElementById('button').src='img/login_button2.jpg'/*tpa=http://www.ogame.org/img/login_button2.jpg*/;" onmouseout="document.getElementById('button').src='img/login_button.jpg'/*tpa=http://www.ogame.org/img/login_button.jpg*/;" />
+            </td>
+          </form>
+        </tr>
+      </table>
+  </div>
+  <div id="login_text_2">
+      <div style="position:absolute;text-align:right;width:439px;top:15px;"><a href="#" onclick="changeAction('getpw');">Forgot your password?</a></div>
+    <div style="position:absolute;left:12px;width:200px;top:15px;text-align:left;">By logging in, I accept the <a target="_blank" href="javascript:if(confirm('http://impressum.gameforge.de/index.php?lang=en&amp;art=tac&amp;special=&amp;&amp;f_text=b1daf2&amp;f_text_hover=ffffff&amp;f_text_h=061229&amp;f_text_hr=061229&amp;f_text_hrbg=061229&amp;f_text_hrborder=9EBDE4&amp;f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&amp;f_bg=000000  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://impressum.gameforge.de/index.php?lang=en&amp;art=tac&amp;special=&amp;&amp;f_text=b1daf2&amp;f_text_hover=ffffff&amp;f_text_h=061229&amp;f_text_hr=061229&amp;f_text_hrbg=061229&amp;f_text_hrborder=9EBDE4&amp;f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&amp;f_bg=000000'" tppabs="http://impressum.gameforge.de/index.php?lang=en&amp;art=tac&amp;special=&amp;&amp;f_text=b1daf2&amp;f_text_hover=ffffff&amp;f_text_h=061229&amp;f_text_hr=061229&amp;f_text_hrbg=061229&amp;f_text_hrborder=9EBDE4&amp;f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&amp;f_bg=000000">T&amp;C's</a></div>
+  </div>
+  <div id="copyright"> (C) 2007 by <a target="_blank" href="javascript:if(confirm('http://www.gameforge.de/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.gameforge.de/'" tppabs="http://www.gameforge.de/">Gameforge Productions GmbH</a>. All rights reserved.&nbsp;&nbsp; </div>
+  <div id="downmenu"> <a href="regeln.html" tppabs="http://www.ogame.org/regeln.html">Rules</a>&nbsp; <a target="_blank" href="javascript:if(confirm('http://impressum.gameforge.de/index.php?lang=en&amp;art=impress&amp;special=&amp;&amp;f_text=b1daf2&amp;f_text_hover=ffffff&amp;f_text_h=061229&amp;f_text_hr=061229&amp;f_text_hrbg=061229&amp;f_text_hrborder=9EBDE4&amp;f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&amp;f_bg=000000  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://impressum.gameforge.de/index.php?lang=en&amp;art=impress&amp;special=&amp;&amp;f_text=b1daf2&amp;f_text_hover=ffffff&amp;f_text_h=061229&amp;f_text_hr=061229&amp;f_text_hrbg=061229&amp;f_text_hrborder=9EBDE4&amp;f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&amp;f_bg=000000'" tppabs="http://impressum.gameforge.de/index.php?lang=en&amp;art=impress&amp;special=&amp;&amp;f_text=b1daf2&amp;f_text_hover=ffffff&amp;f_text_h=061229&amp;f_text_hr=061229&amp;f_text_hrbg=061229&amp;f_text_hrborder=9EBDE4&amp;f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&amp;f_bg=000000">Imprint</a>&nbsp; <a target="_blank" href="javascript:if(confirm('http://impressum.gameforge.de/index.php?lang=en&amp;art=tac&amp;special=&amp;&amp;f_text=b1daf2&amp;f_text_hover=ffffff&amp;f_text_h=061229&amp;f_text_hr=061229&amp;f_text_hrbg=061229&amp;f_text_hrborder=9EBDE4&amp;f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&amp;f_bg=000000  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://impressum.gameforge.de/index.php?lang=en&amp;art=tac&amp;special=&amp;&amp;f_text=b1daf2&amp;f_text_hover=ffffff&amp;f_text_h=061229&amp;f_text_hr=061229&amp;f_text_hrbg=061229&amp;f_text_hrborder=9EBDE4&amp;f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&amp;f_bg=000000'" tppabs="http://impressum.gameforge.de/index.php?lang=en&amp;art=tac&amp;special=&amp;&amp;f_text=b1daf2&amp;f_text_hover=ffffff&amp;f_text_h=061229&amp;f_text_hr=061229&amp;f_text_hrbg=061229&amp;f_text_hrborder=9EBDE4&amp;f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&amp;f_bg=000000">T&amp;C's</a> </div>
+</div>
+<div id="gimmik_1"> </div>
+<div id="gimmik_2"> </div>
+<div id="mainmenu"> <a href="home.php.htm" tppabs="http://www.ogame.org/home.php">Start</a>
+    <div class="menupoint">About OGame</div>
+  <a href="screenshots.html" tppabs="http://www.ogame.org/screenshots.html">Pictures</a> <a href="register.php.htm" tppabs="http://www.ogame.org/register.php">Join Now!</a> <a href="javascript:if(confirm('http://board.ogame.org/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://board.ogame.org/'" tppabs="http://board.ogame.org/" target="_blank">Board</a> </div>
+<div id="rightmenu" class="rightmenu_big">
+  <div id="title">What is OGame?</div>
+  <div id="content">
+    <div id="contentscroll">
+      <p class="aboutParagraphHead"> <img src="img/ogame_admiral.jpg" tppabs="http://www.ogame.org/img/ogame_admiral.jpg" class="imageRight" /> OGame is a game of intergalactic conquest. </p>
+      <p > You start out with just one undeveloped world and turn that into a <strong>mighty empire</strong> able to defend your hard earned colonies. </p>
+      <p > Create an <strong>economic and military infrastructure</strong> to support your quest for the next greatest technological achievements.</p>
+      </p>
+      <img src="img/technik.gif" tppabs="http://www.ogame.org/img/technik.gif" class="imageLeft" />
+      <p > <strong>Wage war</strong> against other empires as you struggle with other players to gain the materials.</p>
+      <p ><strong>Negotiate</strong> with other emperors and create an alliance or trade for much needed resources. </p>
+      <p > <strong>Build an armada</strong> to enforce your will throughout the universe. </p>
+      <img src="img/laser.gif" tppabs="http://www.ogame.org/img/laser.gif" class="imageRight" />
+      <p ><strong>Hoard your resources</strong> behind an impregnable wall of planetary defences.</p>
+      <p >Whatever you wish to do, <strong>OGame can let you do it.</strong> </p>
+      <p > Will you terrorize the area around you? Or will you strike fear into the hearts of those who attack the helpless?</p>
+      <a href="story.html" tppabs="http://www.ogame.org/story.html"class="storyLink">Read the Ogame Story</a> </div>
+  </div>
+</div>
+<script>
+document.loginForm.universe.focus();
+</script>
+
+</body>
+</html>

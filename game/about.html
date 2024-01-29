@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict //EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<meta name="author" content="Gameforge Productions GmbH" />
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta name="keywords" content="OGame, Browsergame, Onlinegame, Browsergames, Browsergame, Spiel, Spiele, Onlinespiel, Onlinespiele" />
+<meta name="description" content="OGame - Top Browsergame im Weltraum. Kommandiere deine Flotten." />
+<meta name="robots" content="index, follow" />
+<meta name="language" content="en" />
+<meta name="distribution" content="global" />
+<meta name="audience" content="all" />
+<meta name="author-mail" content="info@ogame.de" />
+<meta name="publisher" content="Gameforge Productions GmbH" />
+<meta name="copyright" content="(c) 2007 by Gameforge Productions GmbH" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="pragma" content="no-cache" />
+<link rel="shortcut icon" href="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/favicon.ico" type="image/x-icon" />
+<title>OGame.org</title>
+<link rel='stylesheet' type='text/css' href="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/css/styles.css" tppabs="http://www.ogame.org/css/styles.css" />
+<link rel='stylesheet' type='text/css' href="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/css/about.css" tppabs="http://www.ogame.org/css/about.css" />
+<script language="JavaScript">
+if (parent.frames.length == 0) {
+}
+</script>
+<script src="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/js/functions.js" tppabs="http://www.ogame.org/js/functions.js" type="text/javascript"></script>
+<script language="JavaScript" src="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/js/tw-sack.js" tppabs="http://www.ogame.org/js/tw-sack.js"></script>
+<script language="JavaScript" src="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/js/registration.js" tppabs="http://www.ogame.org/js/registration.js"></script>
+<script language="JavaScript" >
+
+function changeAction(type) {
+	if(type != "register" && document.loginForm.universe.value == '') {
+		alert('You haven\'t chosen a universe.');
+	}
+	else {
+		if(type == "login") {
+			var url = "http://" + document.loginForm.universe.value + "/game/reg/login2.php";
+			document.loginForm.action = url;
+		}
+		else if (type=="getpw") {
+			var url = "http://" + document.loginForm.universe.value + "/game/reg/mail.php";
+			document.loginForm.action = url;
+		    document.loginForm.submit();
+		}
+		else if(type == "register") {
+			var url = "http://" + document.registerForm.universe.value + "/game/reg/newredirect.php";
+			document.registerForm.action = url;
+		}
+	}
+}
+
+function printMessage(code, div) {
+	var textclass = "";
+	
+	if (div == null) {
+		div = "statustext";
+	}
+	switch (code) {
+		case "0":
+			text = "OK";
+			textclass = "fine"; 
+			break;
+		case "101":
+			text = "Player\'s name is already taken!"; 
+			textclass = "warning"; 
+			break;
+		case "102":
+			text = "E-Mail-Address is already in use!";
+			textclass = "warning"; 
+			break;
+		case "103":
+			text = "The name must be between 3 and 20 characters long!";
+			textclass = "warning"; 
+			break;
+		case "104":
+			text = "You need to enter a valid e-mail-address!";
+			textclass = "warning"; 
+			break;
+		case "105":
+			text = "Player\'s name OK";
+			textclass = "fine"; 
+			break;
+		case "106":
+			text = "E-Mail-Address OK";
+			textclass = "fine"; 
+			break;
+		case "107":
+			text = "You must enter a valid e-mail-address!";
+			textclass = "warning"; 
+			break;
+		case "201":
+			text = "Name in the game: <br />This is the name you use in the game. It is unique throughout the universe.";
+			break;
+		case "202":
+			text = "E-Mail-Address: <br />Enter a valid E-Mail address to activate your account. You have 3 days to activate your account during those 3 days you are already able to play.";
+			break;
+		case "203":
+			text = "";
+			break;
+		case "204":
+			text = "T&C:<br /> Accept the T&C (Terms and Conditions) to be able to play OGame.";
+			break;
+		case "205":
+			text = "Password:<br/>Your password works as a safety meassure when login in to your account. Do not give your password to anyone!";
+			break;
+		default:
+			text = code;
+			break;
+	}
+	
+	if (textclass != "") {
+		text = "<span class='" + textclass + "'>" + text + "</span>";
+	}
+	document.getElementById(div).innerHTML = text;
+}
+</script>
+</head>
+<body>
+<a href="#pustekuchen" style="display:none;">Link Login</a>
+
+<div id="main">
+    
+<div id="login">
+     <a name="pustekuchen"></a>
+     <div id="login_text_1">
+        <div style="position:absolute;left:160px;width:110px;">Username</div>
+        <div style="position:absolute;left:275px;width:50px;">Password</div>
+     </div>
+     <div id="login_input">
+     <table cellspacing="0" cellpadding="0" border="0"><tr style="vertical-align:top;"><td style="padding-right:4px;">
+         <form name="loginForm" action="" method="POST" onSubmit="changeAction('login');" target="_self" >
+         <input type="hidden" name="v" value="2">
+         
+         <td style="padding-right:3px;">
+         <span><input tabindex="2" class="eingabe" maxlength="20" name="login"   alt=Username style="width:111px;top:0px"/></span>
+         <td>
+         <span><input tabindex="3" maxlength="20" type="password" class="eingabe" name="pass" style="width:113px;top:0px" alt=Password /></span>
+         <td style="padding-top:2px;">
+         <!--<span class="link" onclick="submitLogin()" style="padding-left:7px;">LOGIN</span>-->
+         <input type="image" src="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/img/login_button.jpg" tppabs="http://www.ogame.org/img/login_button.jpg" alt="Login" class="loginButton" name="button" id="button" onmouseover="document.getElementById('button').src='img/login_button2.jpg'/*tpa=http://www.ogame.org/img/login_button2.jpg*/;" onmouseout="document.getElementById('button').src='img/login_button.jpg'/*tpa=http://www.ogame.org/img/login_button.jpg*/;">
+         </form>
+     </tr></table>
+     </div>
+     <div id="login_text_2">
+        <div style="position:absolute;text-align:right;width:439px;top:15px;"><a href="#" onclick="changeAction('getpw');">Forgot your password?</a></div>
+        <div style="position:absolute;left:12px;width:200px;top:15px;text-align:left;">By logging in, I accept the <a target="_blank" href="javascript:if(confirm('http://impressum.gameforge.de/index.php?lang=en&art=tac&special=&&f_text=b1daf2&f_text_hover=ffffff&f_text_h=061229&f_text_hr=061229&f_text_hrbg=061229&f_text_hrborder=9EBDE4&f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&f_bg=000000  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://impressum.gameforge.de/index.php?lang=en&art=tac&special=&&f_text=b1daf2&f_text_hover=ffffff&f_text_h=061229&f_text_hr=061229&f_text_hrbg=061229&f_text_hrborder=9EBDE4&f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&f_bg=000000'" tppabs="http://impressum.gameforge.de/index.php?lang=en&art=tac&special=&&f_text=b1daf2&f_text_hover=ffffff&f_text_h=061229&f_text_hr=061229&f_text_hrbg=061229&f_text_hrborder=9EBDE4&f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&f_bg=000000">T&C's</a></div>
+     </div>   
+     
+     <div id="copyright">
+        (C) 2007 by <a target="_blank" href="javascript:if(confirm('http://www.gameforge.de/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.gameforge.de/'" tppabs="http://www.gameforge.de/">Gameforge Productions GmbH</a>. All rights reserved.&nbsp;&nbsp;
+     </div>
+     <div id="downmenu">
+        <a href="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/regeln.html" tppabs="http://www.ogame.org/regeln.html">Rules</a>&nbsp;
+        <a target="_blank" href="javascript:if(confirm('http://impressum.gameforge.de/index.php?lang=en&art=impress&special=&&f_text=b1daf2&f_text_hover=ffffff&f_text_h=061229&f_text_hr=061229&f_text_hrbg=061229&f_text_hrborder=9EBDE4&f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&f_bg=000000  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://impressum.gameforge.de/index.php?lang=en&art=impress&special=&&f_text=b1daf2&f_text_hover=ffffff&f_text_h=061229&f_text_hr=061229&f_text_hrbg=061229&f_text_hrborder=9EBDE4&f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&f_bg=000000'" tppabs="http://impressum.gameforge.de/index.php?lang=en&art=impress&special=&&f_text=b1daf2&f_text_hover=ffffff&f_text_h=061229&f_text_hr=061229&f_text_hrbg=061229&f_text_hrborder=9EBDE4&f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&f_bg=000000">Imprint</a>&nbsp;
+        <a target="_blank" href="javascript:if(confirm('http://impressum.gameforge.de/index.php?lang=en&art=tac&special=&&f_text=b1daf2&f_text_hover=ffffff&f_text_h=061229&f_text_hr=061229&f_text_hrbg=061229&f_text_hrborder=9EBDE4&f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&f_bg=000000  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://impressum.gameforge.de/index.php?lang=en&art=tac&special=&&f_text=b1daf2&f_text_hover=ffffff&f_text_h=061229&f_text_hr=061229&f_text_hrbg=061229&f_text_hrborder=9EBDE4&f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&f_bg=000000'" tppabs="http://impressum.gameforge.de/index.php?lang=en&art=tac&special=&&f_text=b1daf2&f_text_hover=ffffff&f_text_h=061229&f_text_hr=061229&f_text_hrbg=061229&f_text_hrborder=9EBDE4&f_text_font=arial%2C+arial%2C+arial%2C+sans-serif&f_bg=000000">T&C's</a>
+     </div>    
+</div>
+
+
+<div id="gimmik_1">
+</div>
+<div id="gimmik_2">
+</div>
+
+<div id="mainmenu">
+    <a href="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/home.php.htm" tppabs="http://www.ogame.org/home.php">Start</a>
+    <div class="menupoint">About OGame</div>
+    <a href="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/screenshots.html" tppabs="http://www.ogame.org/screenshots.html">Pictures</a>
+    <a href="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/register.php.htm" tppabs="http://www.ogame.org/register.php">Join Now!</a>
+    <a href="javascript:if(confirm('http://board.ogame.org/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://board.ogame.org/'" tppabs="http://board.ogame.org/" target="_blank">Board</a>
+</div>
+
+<div id="rightmenu" class="rightmenu_big">
+    <div id="title">What is OGame?</div>
+    <div id="content">
+        <div id="contentscroll">
+            <p class="aboutParagraphHead"> <img src="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/img/ogame_admiral.jpg" tppabs="http://www.ogame.org/img/ogame_admiral.jpg" class="imageRight"> OGame is a game of intergalactic conquest. </p>
+    <p >
+You start out with just one undeveloped world and turn that into a <strong>mighty empire</strong> able to defend your hard earned colonies.
+<p >
+Create an <strong>economic and military infrastructure</strong> to support your quest for the next greatest technological achievements.</p>
+</p>
+
+<img src="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/img/technik.gif" tppabs="http://www.ogame.org/img/technik.gif" class="imageLeft">
+ <p >
+<strong>Wage war</strong> against other empires as you struggle with other players to gain the materials.</p>
+<p ><strong>Negotiate</strong> with other emperors and create an alliance or trade for much needed resources. </p>
+ <p >
+<strong>Build an armada</strong> to enforce your will throughout the universe.
+</p>
+<img src="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/img/laser.gif" tppabs="http://www.ogame.org/img/laser.gif" class="imageRight">
+<p ><strong>Hoard your resources</strong> behind an impregnable wall of planetary defences.</p>
+<p >Whatever you wish to do, <strong>OGame can let you do it.</strong>
+<p >
+Will you terrorize the area around you? Or will you strike fear into the hearts of those who attack the helpless?</p>
+<a href="file:///C|/Documents and Settings/HP_Ejer/Dokumenter/ogame/www.ogame.org/story.html" tppabs="http://www.ogame.org/story.html"class="storyLink">Read the Ogame Story</a>        </div>
+    </div>
+</div>
+
+
+
+<script>
+document.loginForm.universe.focus();
+</script>
+
+</body>
+</html>
